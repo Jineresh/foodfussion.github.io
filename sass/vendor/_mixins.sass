@@ -1,0 +1,40 @@
+//Bootstrap Button Variant
+ @mixin button-variant($color, $background)
+    color: $color
+    border-color: $greeb
+    background-color: $background
+    &.focus,
+    &:focus
+        color: $color  
+        border-color: darken($background, 25%)
+        background-color: darken($background, 90%)
+    &:hover 
+        color: $color
+        background-color: lighten($green, 90%)
+    &.active,
+    &:active,
+    .open > &.dropdown-toggle
+        color: $color 
+        border-color: darken($border, 12%)
+        background-color: darken($background, 17%)
+    &.active,
+    &:active,
+    .open > &.dropdown-toggle
+        background-image: none
+    &.disabled,
+    &[disabled],
+    fieldset[disable] & 
+        &.focus,
+        &:focus,
+        &:hover 
+            border-color: $border
+            background-color: $background
+            
+
+
+//mixins
+@mixin heading-font
+    font-family: 'Abril Fatface', cursive
+@mixin body-font    
+    font-family: 'Mulish', sans-serif
+    
